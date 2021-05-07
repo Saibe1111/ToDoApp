@@ -17,7 +17,7 @@ function Form({ dispatch }) {
             <button
                 onClick={function () {
                     dispatch({
-                        type: "ADD_ITEM",
+                        type: "ADD_ITEMS",
                         value,
                     });
                     setValue("");

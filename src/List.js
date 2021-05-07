@@ -12,7 +12,7 @@ function List({ items }) {
 }
 
 const mapStateToProps = state => {
-    return { items: state.items };
+    return { items: state?.items === undefined ? [] : state?.items };
 };
 
 export default connect(mapStateToProps)(List);

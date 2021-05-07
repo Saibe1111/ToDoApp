@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 
-
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 const ADD_ITEMS = "ADD_ITEMS";
+
 
 let store = createStore(function (state, action) {
 
@@ -13,12 +13,13 @@ let store = createStore(function (state, action) {
     case ADD_ITEMS:
       return {
         ...state,
-        items: [...state.items, action.value]
+        items: [...state?.items === undefined ? [] : state?.items, action.value]
       }
+
+    default:
+      return state;
   }
-
 });
-
 
 ReactDOM.render(
   <Provider store={store}>
