@@ -20,18 +20,14 @@ let store = createStore(function (state, action) {
       }
     case REMOVE_ITEMS:
 
-      const itemList = state?.items;
-
-      itemList.forEach(element => {
-        if(element.id === action.value){
-          itemList.remove(element);
-        }
-      });
+      console.log(`id:${action.buttonId}`)
+      console.log([...state.items.filter(item => item.id !== action.buttonId)])
 
       return {
         ...state,
-        items: [],
+        items: [...state.items.filter(item => item.id !== action.buttonId)],
       }
+
     default:
       return state;
   }
