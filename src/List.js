@@ -4,27 +4,27 @@ import React from "react";
 function List({ items, dispatch }) {
     return (
         <ul>
-            {items.map((item) => {
+            {items.map((item, index) => {
                 return (
                     <React.Fragment>
-                        <li>
-                            {item.id}: {item.text} -{" "}
-                            {new Date(item.timestamp).toLocaleTimeString()}
-                        </li>
-                        <button
-                            onClick={function () {
-                                const buttonId = item.id;
-                                dispatch({
-                                    type: "REMOVE_ITEMS",
-                                    buttonId,
-                                });
-                            }}
-                        >
-                            &#10006;
-                        </button>
-                        {item.finish ? (
+                        <div className={`${index % 2 === 0 ? "light" : ""}`}>
+                            <li className="clear" key={item.id.toString()}>
+                                {item.id}: {item.text} -{" "}
+                                {new Date(item.timestamp).toLocaleTimeString()}
+                            </li>
                             <button
-                                className="green"
+                                onClick={function () {
+                                    const buttonId = item.id;
+                                    dispatch({
+                                        type: "REMOVE_ITEMS",
+                                        buttonId,
+                                    });
+                                }}
+                            >
+                                &#10006;
+                            </button>
+                            <button
+                                className={`${item.finish ? "green" : ""}`}
                                 onClick={function () {
                                     const buttonId = item.id;
                                     dispatch({
@@ -35,19 +35,7 @@ function List({ items, dispatch }) {
                             >
                                 &#10004;
                             </button>
-                        ) : (
-                            <button
-                                onClick={function () {
-                                    const buttonId = item.id;
-                                    dispatch({
-                                        type: "CHANGE_FINISH_ITEMS",
-                                        buttonId,
-                                    });
-                                }}
-                            >
-                                &#10004;
-                            </button>
-                        )}
+                        </div>
                     </React.Fragment>
                 );
             })}

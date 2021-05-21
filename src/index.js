@@ -47,7 +47,7 @@ let store = createStore(function (state, action) {
                 ...state,
                 items: list,
             };
-
+            
         default:
             return state;
     }
