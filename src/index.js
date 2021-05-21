@@ -21,11 +21,11 @@ let store = createStore(function (state, action) {
     case REMOVE_ITEMS:
 
       console.log(`id:${action.buttonId}`)
-      console.log([...state.items.filter(item => item.id !== action.buttonId)])
+      console.log([...state.items.filter(item => item.id !== parseInt(action.buttonId))])
 
       return {
         ...state,
-        items: [...state.items.filter(item => item.id !== action.buttonId)],
+        items: [...state.items.filter(item => item.id !== parseInt(action.buttonId))],
       }
 
     default:
