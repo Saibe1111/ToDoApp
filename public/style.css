@@ -1,3 +1,12 @@
-button.green { background-color: green }
-div.light { background-color: rgb(161, 161, 161) }
-li.clear { list-style-type: none }
+button.green {
+    background-color: green;
+}
+button.red {
+    background-color: red;
+}
+div.light {
+    background-color: rgb(161, 161, 161);
+}
+li.clear {
+    list-style-type: none;
+}
