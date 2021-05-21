@@ -1,15 +1,15 @@
 import Form from "./Form.js";
 import List from "./List.js";
-import React from 'react';
+import React from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <Form />
-      <br/>
-      <List />
-    </div>
-  );
+    return (
+        <div className="App">
+            <Form />
+            <br />
+            <List />
+        </div>
+    );
 }
 
 export default App;

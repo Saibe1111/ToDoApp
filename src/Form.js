@@ -1,8 +1,7 @@
-import { connect } from 'react-redux';
-import React from 'react';
+import { connect } from "react-redux";
+import React from "react";
 
 function Form({ dispatch }) {
-
     const [value, setValue] = React.useState("");
 
     return (
@@ -27,7 +26,6 @@ function Form({ dispatch }) {
             </button>
         </React.Fragment>
     );
-
 }
 
 export default connect()(Form);
