@@ -34,7 +34,6 @@ let store = createStore(function (state, action) {
                     ),
                 ],
             };
-
         case CHANGE_FINISH_ITEMS:
             const list = [...state.items];
             list.forEach((element) => {
@@ -47,7 +46,7 @@ let store = createStore(function (state, action) {
                 ...state,
                 items: list,
             };
-            
+
         default:
             return state;
     }

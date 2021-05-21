@@ -13,6 +13,7 @@ function List({ items, dispatch }) {
                                 {new Date(item.timestamp).toLocaleTimeString()}
                             </li>
                             <button
+                                className="red"
                                 onClick={function () {
                                     const buttonId = item.id;
                                     dispatch({
@@ -24,7 +25,7 @@ function List({ items, dispatch }) {
                                 &#10006;
                             </button>
                             <button
-                                className={`${item.finish ? "green" : ""}`}
+                                className={`${item.finish ? "green" : "red"}`}
                                 onClick={function () {
                                     const buttonId = item.id;
                                     dispatch({

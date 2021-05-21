@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import React from "react";
 
-function Filter({ dispatch }) {
+function Filter() {
     return (
         <React.Fragment>
             <button>All</button>
