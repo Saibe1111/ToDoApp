@@ -1,6 +1,6 @@
 # ToDoApp
 
-A version deployed by cloudflare pages is available via the link : https://2d33706b.todoapp.pages.dev/
+A version deployed by cloudflare pages is available via the link : https://todoapp.pages.dev/
 
 ## Available Scripts
 
