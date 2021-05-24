@@ -4,9 +4,8 @@ import App from "./App";
 
 import { Provider } from "react-redux";
 import { createStore } from "redux";
-const ADD_ITEMS = "ADD_ITEMS";
-const REMOVE_ITEMS = "REMOVE_ITEMS";
-const CHANGE_FINISH_ITEMS = "CHANGE_FINISH_ITEMS";
+import { ADD_ITEMS, REMOVE_ITEMS, CHANGE_FINISH_ITEMS } from "./Action.js"
+
 let id = 0;
 
 let store = createStore(function (state, action) {
